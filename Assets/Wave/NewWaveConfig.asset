@@ -89,7 +89,7 @@ MonoBehaviour:
       - enemyType: Enemy
         spawnWeight: 2
       minEnemies: 2
-      maxEnemies: 10
+      maxEnemies: 20
       minTimeSpawn: 2
       maxTimeSpawn: 5
       minSpeed: 2
@@ -105,6 +105,49 @@ MonoBehaviour:
         spawnWeight: 1
       minEnemies: 2
       maxEnemies: 10
+      minTimeSpawn: 2
+      maxTimeSpawn: 5
+      minSpeed: 1
+      maxSpeed: 5
+      itemName: Item
+      minItem: 1
+      maxItem: 5
+    waveConfigSO:
+    - {fileID: 11400000, guid: d11936f61c90adb47bfe8443c62172c5, type: 2}
+    - {fileID: 11400000, guid: d5de260c1a94be743818f9cf272f106d, type: 2}
+    - {fileID: 11400000, guid: cacf73581451fa246a9b1402dda86201, type: 2}
+  - waveName: 
+    waveDuration: 30
+    subWaves:
+    - waveName: 
+      enemyTypes:
+      - enemyType: Enemy
+        spawnWeight: 2
+      - enemyType: Meteors
+        spawnWeight: 2
+      - enemyType: Meteors
+        spawnWeight: 2
+      minEnemies: 2
+      maxEnemies: 10
+      minTimeSpawn: 2
+      maxTimeSpawn: 5
+      minSpeed: 2
+      maxSpeed: 10
+      itemName: Item
+      minItem: 1
+      maxItem: 5
+    - waveName: 
+      enemyTypes:
+      - enemyType: Enemy
+        spawnWeight: 1
+      - enemyType: Meteors
+        spawnWeight: 1
+      - enemyType: Meteors
+        spawnWeight: 1
+      - enemyType: Meteors
+        spawnWeight: 1
+      minEnemies: 2
+      maxEnemies: 30
       minTimeSpawn: 2
       maxTimeSpawn: 5
       minSpeed: 1

@@ -201,7 +201,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  health: 40
+  health: 140
   score: 50
   hitEffect: {fileID: 8503272965454256792, guid: b15eb2c359ab50248a18f66e70416afd, type: 3}
   tag: Meteors

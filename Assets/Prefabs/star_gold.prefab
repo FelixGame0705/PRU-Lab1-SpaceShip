@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 697866339641288643}
   - component: {fileID: 3209358193241532117}
   - component: {fileID: 3095986102732613399}
+  - component: {fileID: 4674644295677965043}
   m_Layer: 10
   m_Name: star_gold
   m_TagString: Untagged
@@ -141,7 +142,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -168,3 +169,16 @@ MonoBehaviour:
   score: 100
   tag: Item
   lifetime: 5
+--- !u!114 &4674644295677965043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4131118034436949352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c186df723f337a0418f667838b217481, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  gravityScale: 1

@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 1776750532511303313}
   - component: {fileID: 5788116982156570393}
   m_Layer: 0
-  m_Name: VFX_GreenSmoke
+  m_Name: VFX_BlueSmoke
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -116,8 +116,8 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 1
-      minScalar: 1
+      scalar: 0.3
+      minScalar: 0.2
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -223,7 +223,7 @@ ParticleSystem:
       serializedVersion: 2
       minMaxState: 0
       minColor: {r: 1, g: 0.4253732, b: 0, a: 1}
-      maxColor: {r: 0, g: 1, b: 0.4117647, a: 0.78431374}
+      maxColor: {r: 0, g: 0.69129777, b: 1, a: 0.78431374}
       maxGradient:
         serializedVersion: 2
         key0: {r: 1, g: 1, b: 1, a: 1}
@@ -611,7 +611,7 @@ ParticleSystem:
     gravityModifier:
       serializedVersion: 2
       minMaxState: 3
-      scalar: 0.5
+      scalar: 1
       minScalar: -0.3
       maxCurve:
         serializedVersion: 2

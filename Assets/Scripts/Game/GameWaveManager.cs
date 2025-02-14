@@ -12,6 +12,13 @@ public class GameWaveManager : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI timerText;
 
+    [SerializeField]
+    private ScoreKeeper scoreKeeper;
+
+    [Header("Weapons")]
+    [SerializeField]
+    GunSpawner gunSpawner;
+
     private int currentWave = 0;
     private float waveTimeRemaining = 0f;
     private bool isWaveActive = false;
@@ -24,6 +31,11 @@ public class GameWaveManager : MonoBehaviour
             Destroy(gameObject);
     }
 
+    private void Start()
+    {
+        scoreKeeper = FindObjectOfType<ScoreKeeper>();
+    }
+
     public void StartNewWave(float waveDuration, int count)
     {
         currentWave += count;
@@ -32,6 +44,11 @@ public class GameWaveManager : MonoBehaviour
 
         UpdateWaveUI();
         StartCoroutine(UpdateTimer());
+    }
+
+    public void Update()
+    {
+        SpawnGun();
     }
 
     private void UpdateWaveUI()
@@ -50,5 +67,17 @@ public class GameWaveManager : MonoBehaviour
 
         isWaveActive = false;
         timerText.text = "Wave Over!";
+    }
+
+    void SpawnGun()
+    {
+        if (scoreKeeper.GetScore() >= 2000)
+        {
+            gunSpawner.SpawnNextGun();
+        }
+        else if (scoreKeeper.GetScore() >= 1000 && gunSpawner.GetCountGuns() < 1)
+        {
+            gunSpawner.SpawnNextGun();
+        }
     }
 }

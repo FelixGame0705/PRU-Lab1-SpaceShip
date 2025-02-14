@@ -368,7 +368,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0, g: 0.7490196, b: 1, a: 1}
+  m_Color: {r: 0, g: 0.49818897, b: 1, a: 1}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
@@ -379,7 +379,7 @@ MonoBehaviour:
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
-  m_FillMethod: 4
+  m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
   m_FillOrigin: 0
@@ -393,6 +393,17 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 88984488}
   m_CullTransparentMesh: 1
+--- !u!114 &231751346 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 1113059482282433700, guid: 09b79165dd08627409bd32682a16c396, type: 3}
+  m_PrefabInstance: {fileID: 67785643}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 41e92ff8b32bdd74e8208a9c6f068914, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &355885286
 GameObject:
   m_ObjectHideFlags: 0
@@ -566,7 +577,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5049669443546962310, guid: 9a049a6fa5d79cc41a3c467ade9ba2ca, type: 3}
       propertyPath: m_SortingOrder
-      value: -5
+      value: -4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1186,6 +1197,10 @@ MonoBehaviour:
   bulletEnemyPrefab: {fileID: 6889704524421317614, guid: daadf7954d7738d4891409b2865576de, type: 3}
   meteorsPrefab: {fileID: 7010870377860643269, guid: 75bab897f45be2c4884c93142da3af38, type: 3}
   bulletPrefab: {fileID: 6889704524421317614, guid: b8518c306556ee94991495c1b1e9294c, type: 3}
+  bulletSub1: {fileID: 6889704524421317614, guid: e68e843fe2946e444b446459944ee5e5, type: 3}
+  bulletSub2: {fileID: 6889704524421317614, guid: 7ae0474ffa8d6dd4b88b4eae358f047f, type: 3}
+  bigEnemy: {fileID: 7010870377860643269, guid: 24253a964a105b647abb2a423d303999, type: 3}
+  bulletBigEnemy: {fileID: 6889704524421317614, guid: 6ad6e4178f34fe94994928fffe019c38, type: 3}
   Flying: {fileID: 7010870377860643269, guid: beab4500f34abdf4581067ec9b33f2a4, type: 3}
   Item: {fileID: 4131118034436949352, guid: ebdd36202384ada4c88a29d2f1ae6698, type: 3}
   hitVFX: {fileID: 2985175725236992610, guid: b15eb2c359ab50248a18f66e70416afd, type: 3}
@@ -1573,6 +1588,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waveText: {fileID: 437173282}
   timerText: {fileID: 1697960927}
+  scoreKeeper: {fileID: 0}
+  gunSpawner: {fileID: 231751346}
 --- !u!4 &1752481152
 Transform:
   m_ObjectHideFlags: 0

@@ -17,7 +17,7 @@ public class Health : MonoBehaviour
     ParticleSystem hitEffect;
 
     [SerializeField]
-    string tag;
+    public string tag;
 
     [SerializeField]
     bool applyCameraShake;

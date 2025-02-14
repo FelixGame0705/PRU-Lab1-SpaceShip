@@ -25,13 +25,13 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6852511329266788232}
   serializedVersion: 2
-  m_LocalRotation: {x: 0, y: 0, z: 1, w: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.7071068, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0.3, y: 0.3, z: 0.3}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 3127101684111938468}
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 180}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 90}
 --- !u!212 &2845608158413715403
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -76,7 +76,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 4618631658267575960, guid: 5bff610c17755384186414622006f62d, type: 3}
+  m_Sprite: {fileID: 7707244756401149671, guid: 7a6bdf78958bc2a4887be23df8345cbc, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -103,7 +103,7 @@ GameObject:
   - component: {fileID: 6093911037794988767}
   - component: {fileID: -2362129504164698134}
   m_Layer: 9
-  m_Name: enemy 5
+  m_Name: enemy 6
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,7 +204,7 @@ MonoBehaviour:
   health: 50
   score: 35
   hitEffect: {fileID: 8503272965454256792, guid: b15eb2c359ab50248a18f66e70416afd, type: 3}
-  tag: Flying
+  tag: BigEnemy
   applyCameraShake: 0
 --- !u!114 &181910202121252935
 MonoBehaviour:
@@ -219,7 +219,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   damage: 25
-  tag: Flying
+  tag: BigEnemy
 --- !u!114 &6093911037794988767
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -233,8 +233,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 6889704524421317614, guid: daadf7954d7738d4891409b2865576de, type: 3}
-  projectileType: BulletEnemy
-  projectileSpeed: 8
+  projectileType: BulletBigEnemy
+  projectileSpeed: 5
   projectileLifetime: 3
   baseFiringRate: 1.2
   useAI: 1

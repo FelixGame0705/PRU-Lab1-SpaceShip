@@ -40,7 +40,7 @@ public class EnemiesSpawnerGame : MonoBehaviour
                 for (int i = 0; i < currentWave.GetEnemyCount(); i++)
                 {
                     ObjectPooler.Instance.SpawnFromPool(
-                        "Flying",
+                        currentWave.GetEnemyPrefab(i).GetComponent<Health>().tag,
                         currentWave.GetStartingWaypoint().position,
                         Quaternion.Euler(0, 0, 180)
                     );

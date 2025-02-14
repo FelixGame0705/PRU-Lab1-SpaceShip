@@ -21,6 +21,9 @@ public class Player : MonoBehaviour
     [SerializeField]
     float paddingBottom;
 
+    [SerializeField]
+    Animator animator;
+
     Vector2 minBounds;
     Vector2 maxBounds;
 
@@ -62,6 +65,18 @@ public class Player : MonoBehaviour
             minBounds.y + paddingBottom,
             maxBounds.y - paddingTop
         );
+        if (rawInput.x < 0)
+        {
+            transform.rotation = Quaternion.Euler(0, -30, 0);
+        }
+        else if (rawInput.x > 0)
+        {
+            transform.rotation = Quaternion.Euler(0, 30, 0);
+        }
+        else
+        {
+            transform.rotation = Quaternion.Euler(0, 0, 0);
+        }
         transform.position = newPos;
     }
 
