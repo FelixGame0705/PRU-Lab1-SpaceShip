@@ -390,6 +390,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 6387924003853580222}
     m_Modifications:
+    - target: {fileID: 1776750532511303313, guid: 8b7d567d530f3d44c92b4d853cd6692f, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.b
+      value: 0.94366646
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776750532511303313, guid: 8b7d567d530f3d44c92b4d853cd6692f, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1776750532511303313, guid: 8b7d567d530f3d44c92b4d853cd6692f, type: 3}
+      propertyPath: InitialModule.startColor.maxColor.r
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2620538402441701008, guid: 8b7d567d530f3d44c92b4d853cd6692f, type: 3}
       propertyPath: m_Name
       value: VFX_GreenSmoke

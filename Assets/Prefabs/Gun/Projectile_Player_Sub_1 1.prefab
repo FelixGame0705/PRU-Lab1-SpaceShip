@@ -76,7 +76,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 51e371a1f0244e047a5ef8bcb9f9ba2d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 8
+  damage: 30
   tag: Bullet_Sub_2
 --- !u!114 &542000020751813575
 MonoBehaviour:

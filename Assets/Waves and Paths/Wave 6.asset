@@ -13,9 +13,9 @@ MonoBehaviour:
   m_Name: Wave 6
   m_EditorClassIdentifier: 
   enemyPrefabs:
-  - {fileID: 7010870377860643269, guid: 1561e237e30c3b549a1a7c118cabb67b, type: 3}
-  - {fileID: 7010870377860643269, guid: 83afd6e62a29c9645b3c5c1bd42a9323, type: 3}
-  - {fileID: 7010870377860643269, guid: 1561e237e30c3b549a1a7c118cabb67b, type: 3}
+  - {fileID: 7010870377860643269, guid: beab4500f34abdf4581067ec9b33f2a4, type: 3}
+  - {fileID: 7010870377860643269, guid: 24253a964a105b647abb2a423d303999, type: 3}
+  - {fileID: 7010870377860643269, guid: beab4500f34abdf4581067ec9b33f2a4, type: 3}
   pathPrefab: {fileID: 5882673636181537656, guid: e69d26ad79520734783d03374522e030, type: 3}
   moveSpeed: 5
   timeBetweenEnemySpawns: 1

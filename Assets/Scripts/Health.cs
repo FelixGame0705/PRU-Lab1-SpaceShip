@@ -61,7 +61,6 @@ public class Health : MonoBehaviour
         currentHealth -= damage;
         if (currentHealth <= 0)
         {
-            currentHealth = health;
             Die();
         }
     }
@@ -70,6 +69,7 @@ public class Health : MonoBehaviour
     {
         if (!isPlayer)
         {
+            currentHealth = health;
             scoreKeeper.ModifyScore(score);
         }
         else

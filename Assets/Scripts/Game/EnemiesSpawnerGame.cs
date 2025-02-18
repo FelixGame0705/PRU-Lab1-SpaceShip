@@ -22,7 +22,6 @@ public class EnemiesSpawnerGame : MonoBehaviour
     void Start()
     {
         StartCoroutine(SpawnMajorWaves());
-        StartCoroutine(SpawnEnemyWaves(waveConfig.majorWaves[currentMajorWaveIndex]));
     }
 
     public WaveConfigSO GetCurrentWave()
@@ -69,7 +68,7 @@ public class EnemiesSpawnerGame : MonoBehaviour
                     yield break;
                 }
             }
-
+            StartCoroutine(SpawnEnemyWaves(waveConfig.majorWaves[currentMajorWaveIndex]));
             WaveConfigGame.MajorWave currentWave = waveConfig.majorWaves[currentMajorWaveIndex];
             GameWaveManager.Instance.StartNewWave(currentWave.waveDuration, 1);
 

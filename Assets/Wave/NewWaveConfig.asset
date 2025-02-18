@@ -80,7 +80,7 @@ MonoBehaviour:
     waveConfigSO:
     - {fileID: 11400000, guid: d11936f61c90adb47bfe8443c62172c5, type: 2}
     - {fileID: 11400000, guid: d5de260c1a94be743818f9cf272f106d, type: 2}
-    - {fileID: 11400000, guid: cacf73581451fa246a9b1402dda86201, type: 2}
+    - {fileID: 11400000, guid: aab415541740911468d3b725730bf8d2, type: 2}
   - waveName: 
     waveDuration: 30
     subWaves:
@@ -114,8 +114,8 @@ MonoBehaviour:
       maxItem: 5
     waveConfigSO:
     - {fileID: 11400000, guid: d11936f61c90adb47bfe8443c62172c5, type: 2}
-    - {fileID: 11400000, guid: d5de260c1a94be743818f9cf272f106d, type: 2}
-    - {fileID: 11400000, guid: cacf73581451fa246a9b1402dda86201, type: 2}
+    - {fileID: 11400000, guid: aab415541740911468d3b725730bf8d2, type: 2}
+    - {fileID: 11400000, guid: 1df2b635688aa3a499f26af9ca3e5515, type: 2}
   - waveName: 
     waveDuration: 30
     subWaves:
@@ -159,4 +159,7 @@ MonoBehaviour:
     - {fileID: 11400000, guid: d11936f61c90adb47bfe8443c62172c5, type: 2}
     - {fileID: 11400000, guid: d5de260c1a94be743818f9cf272f106d, type: 2}
     - {fileID: 11400000, guid: cacf73581451fa246a9b1402dda86201, type: 2}
+    - {fileID: 11400000, guid: aab415541740911468d3b725730bf8d2, type: 2}
+    - {fileID: 11400000, guid: 1df2b635688aa3a499f26af9ca3e5515, type: 2}
+    - {fileID: 11400000, guid: 2fe2f9897ff2d184e832536b9139f82d, type: 2}
   allowEndlessMode: 1
