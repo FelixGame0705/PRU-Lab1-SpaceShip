@@ -20,11 +20,13 @@ public class PauseMenuController : MonoBehaviour
 
     public void Quit()
     {
-        SceneManager.LoadScene("MainMenu");
+        SceneManager.LoadScene("Menu");
     }
 
     public void Restart()
     {
+        Time.timeScale = 1;
+        pauseMenu.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
 }

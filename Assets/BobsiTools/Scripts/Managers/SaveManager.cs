@@ -1,7 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using System.IO;
+using UnityEngine;
 
 public static class SaveManager
 {
@@ -12,15 +12,18 @@ public static class SaveManager
     static Dictionary<string, Quaternion> rotationDictionary = new Dictionary<string, Quaternion>();
     static Dictionary<string, Vector3> scaleDictionary = new Dictionary<string, Vector3>();
 
-
-    private static List<string> floatKeyLocal = new List<string>(), intKeyLocal = new List<string>(), stringKeyLocal = new List<string>(), vectorKeyLocal = new List<string>(), rotationKeyLocal = new List<string>(), scaleKeyLocal = new List<string>();
+    private static List<string> floatKeyLocal = new List<string>(),
+        intKeyLocal = new List<string>(),
+        stringKeyLocal = new List<string>(),
+        vectorKeyLocal = new List<string>(),
+        rotationKeyLocal = new List<string>(),
+        scaleKeyLocal = new List<string>();
     private static List<float> floatValueLocal = new List<float>();
     private static List<int> intValueLocal = new List<int>();
     private static List<string> stringValueLocal = new List<string>();
     private static List<Vector3> vectorValueLocal = new List<Vector3>();
     private static List<Quaternion> rotationValueLocal = new List<Quaternion>();
     private static List<Vector3> scaleValueLocal = new List<Vector3>();
-
 
     public static void SetFloat(string key, float value)
     {
@@ -54,7 +57,6 @@ public static class SaveManager
 
     public static void Save()
     {
-
         PopulateSaveLists();
 
         SaveData saveData = new SaveData
@@ -75,7 +77,7 @@ public static class SaveManager
             rotationValues = rotationValueLocal,
 
             scaleKeys = scaleKeyLocal,
-            scaleValues = scaleValueLocal
+            scaleValues = scaleValueLocal,
         };
 
         string json = JsonUtility.ToJson(saveData);
@@ -84,13 +86,27 @@ public static class SaveManager
 
     private static void PopulateSaveLists()
     {
-        foreach(var f in floatDictionary)
+        // Clear the lists before populating them
+        floatKeyLocal.Clear();
+        floatValueLocal.Clear();
+        intKeyLocal.Clear();
+        intValueLocal.Clear();
+        stringKeyLocal.Clear();
+        stringValueLocal.Clear();
+        vectorKeyLocal.Clear();
+        vectorValueLocal.Clear();
+        rotationKeyLocal.Clear();
+        rotationValueLocal.Clear();
+        scaleKeyLocal.Clear();
+        scaleValueLocal.Clear();
+
+        foreach (var f in floatDictionary)
         {
             floatKeyLocal.Add(f.Key);
             floatValueLocal.Add(f.Value);
         }
 
-        foreach(var i in intDictionary)
+        foreach (var i in intDictionary)
         {
             intKeyLocal.Add(i.Key);
             intValueLocal.Add(i.Value);
@@ -123,10 +139,10 @@ public static class SaveManager
 
     public static void Load()
     {
-        if (!File.Exists(Application.dataPath + "SaveData.json"))
+        if (!File.Exists(Application.dataPath + "/SaveData.json"))
             return;
 
-        string json = File.ReadAllText(Application.dataPath + "SaveData.json");
+        string json = File.ReadAllText(Application.dataPath + "/SaveData.json");
 
         SaveData saveData = JsonUtility.FromJson<SaveData>(json);
 
@@ -151,7 +167,7 @@ public static class SaveManager
 
     public static float GetFloat(string key, float defaultValue)
     {
-        if (floatDictionary.TryGetValue(key, out float value)) 
+        if (floatDictionary.TryGetValue(key, out float value))
             return value;
 
         return defaultValue;

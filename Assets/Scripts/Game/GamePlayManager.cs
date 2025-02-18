@@ -38,14 +38,14 @@ public class GamePlayManager : MonoBehaviour
     void Start()
     {
         // Tạo Pool cho các đối tượng khác nhau
-        ObjectPooler.Instance.CreatePool("Enemy", enemyPrefab, 10);
-        ObjectPooler.Instance.CreatePool("Meteors", meteorsPrefab, 10);
-        ObjectPooler.Instance.CreatePool("Bullet", bulletPrefab, 20);
+        ObjectPooler.Instance.CreatePool("Enemy", enemyPrefab, 5);
+        ObjectPooler.Instance.CreatePool("Meteors", meteorsPrefab, 5);
+        ObjectPooler.Instance.CreatePool("Bullet", bulletPrefab, 5);
         ObjectPooler.Instance.CreatePool("Bullet_Sub_1", bulletSub1, 5);
         ObjectPooler.Instance.CreatePool("Bullet_Sub_2", bulletSub2, 5);
-        ObjectPooler.Instance.CreatePool("BigEnemy", bigEnemy, 5);
+        ObjectPooler.Instance.CreatePool("BigEnemy", bigEnemy, 3);
         ObjectPooler.Instance.CreatePool("BulletBigEnemy", bulletBigEnemy, 5);
-        ObjectPooler.Instance.CreatePool("BulletEnemy", bulletEnemyPrefab, 30);
+        ObjectPooler.Instance.CreatePool("BulletEnemy", bulletEnemyPrefab, 5);
         ObjectPooler.Instance.CreatePool("Flying", Flying, 5);
         ObjectPooler.Instance.CreatePool("Item", Item, 5);
         ObjectPooler.Instance.CreatePool("HitVFX", hitVFX, 5);

@@ -24,16 +24,30 @@ public class RandomMove : MonoBehaviour
     private GameObject fireTail;
 
     [SerializeField]
+    private float minScale = 1f; // Tỉ lệ nhỏ nhất
+
+    [SerializeField]
+    private float maxScale = 2f; // Tỉ lệ lớn nhất
+
+    [SerializeField]
     private string tag;
 
     private Vector2 moveDirection; // Hướng di chuyển ban đầu
     private Vector2 initialPosition; // Lưu vị trí ban đầu để kiểm tra khoảng cách
+    private float scale; // Tỉ lệ ngẫu nhiên
+
+    public float GetScale()
+    {
+        return scale;
+    }
 
     void OnEnable()
     {
         // Đặt vị trí bắt đầu
         transform.position = startMove;
         initialPosition = startMove;
+        scale = Random.Range(minScale, maxScale); // Tạo tỉ lệ ngẫu nhiên
+        transform.localScale = new Vector2(scale, scale); // Đặt tỉ lệ nhỏ nhất
 
         // Tạo hướng di chuyển chủ yếu rơi xuống với một chút lệch ngang
         float randomXOffset = Random.Range(-xDeviation, xDeviation); // Độ lệch ngang ngẫu nhiên
