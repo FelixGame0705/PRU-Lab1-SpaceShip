@@ -1,11 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
-using UnityEngine;
 using TMPro;
+using UnityEngine;
 
 public class UIGameOver : MonoBehaviour
 {
-    [SerializeField] TextMeshProUGUI scoreText;
+    [SerializeField]
+    TextMeshProUGUI scoreText;
     ScoreKeeper scoreKeeper;
 
     void Awake()
@@ -16,5 +17,8 @@ public class UIGameOver : MonoBehaviour
     void Start()
     {
         scoreText.text = "You Scored:\n" + scoreKeeper.GetScore();
+        SaveController saveController = FindObjectOfType<SaveController>();
+        saveController.Save(scoreKeeper.GetScore());
+        saveController.Load();
     }
 }
