@@ -6,6 +6,13 @@ public class PauseMenuController : MonoBehaviour
     [SerializeField]
     GameObject pauseMenu;
 
+    ScoreKeeper _scoreKeeper;
+
+    public void Start()
+    {
+        _scoreKeeper = FindObjectOfType<ScoreKeeper>();
+    }
+
     public void Pause()
     {
         Time.timeScale = 0;
@@ -26,6 +33,7 @@ public class PauseMenuController : MonoBehaviour
     public void Restart()
     {
         Time.timeScale = 1;
+        _scoreKeeper.ResetScore();
         pauseMenu.SetActive(false);
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }
